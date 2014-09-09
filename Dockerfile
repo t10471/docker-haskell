@@ -8,6 +8,7 @@ RUN apt-get update\
  && apt-get install ${OPTS_APT}\
       zlib1g-dev
 
+RUN cabal update
 RUN cabal install pandoc
 
 RUN mkdir ~/workspace
