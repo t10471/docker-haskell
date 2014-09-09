@@ -9,7 +9,7 @@ RUN apt-get update\
       zlib1g-dev
 
 RUN cabal update
-## RUN cabal install pandoc
+RUN cabal install pandoc
 
 RUN mkdir ~/workspace
 VOLUME /home/haskell/workspace
