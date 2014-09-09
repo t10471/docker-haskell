@@ -12,4 +12,4 @@ RUN cabal update
 RUN cabal install pandoc
 
 RUN mkdir ~/workspace
-VOLUME /home/haskell/workspace
+VOLUME /root/workspace
