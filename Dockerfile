@@ -30,6 +30,3 @@ RUN echo -e "Host github.com\n\
   TCPKeepAlive yes\n\
   IdentitiesOnly yes\n" >> /root/.ssh/config
 
-## scpで親から鍵を取得
-## user parentは置換する
-## scp  user@parent:~/.ssh/id_rsa_github ~/.ssh/id_rsa_github
