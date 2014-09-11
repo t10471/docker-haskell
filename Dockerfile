@@ -17,11 +17,12 @@ RUN cabal install haddock
 RUN cabal install hoogle
 RUN cabal install ghc-mod
 
+RUN hoogle data
+
 RUN mkdir ~/workspace
 VOLUME /root/workspace
 
 RUN touch /root/.ssh/known_hosts
-# Add bitbuckets key
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
 RUN echo "Host github.com\n\
