@@ -8,7 +8,8 @@ RUN apt-get update\
  && apt-get install ${OPTS_APT}\
       zlib1g-dev \
       git \
-      build-essential
+      build-essential \
+      wget
 
 RUN cabal update
 RUN cabal install pandoc
@@ -31,3 +32,5 @@ RUN echo "Host github.com\n\
   TCPKeepAlive yes\n\
   IdentitiesOnly yes\n" >> /root/.ssh/config
 
+ADD dotfiles.sh /root/
+RUN curl -L https://gist.github.com/lambdalisue/5911291/raw/install_vim_debian.sh | bash
