@@ -7,7 +7,8 @@ ENV OPTS_APT -y --force-yes --no-install-recommends
 RUN apt-get update\
  && apt-get install ${OPTS_APT}\
       zlib1g-dev \
-      git
+      git \
+      build-essential
 
 RUN cabal update
 RUN cabal install pandoc
