@@ -22,7 +22,7 @@ RUN touch /root/.ssh/known_hosts
 # Add bitbuckets key
 RUN ssh-keyscan github.com >> /root/.ssh/known_hosts
 
-RUN echo -e "Host github.com\n\
+RUN echo "Host github.com\n\
   User git\n\
   Port 22\n\
   Hostname github.com\n\
