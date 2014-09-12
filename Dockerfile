@@ -9,7 +9,9 @@ RUN apt-get update\
       zlib1g-dev \
       git \
       build-essential \
-      wget
+      wget \
+      liblua5.2-dev \
+      liblua5.2
 
 RUN cabal update
 RUN cabal install pandoc
