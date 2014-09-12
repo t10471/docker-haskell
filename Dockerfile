@@ -17,7 +17,7 @@ RUN cabal install haddock
 RUN cabal install hoogle
 RUN cabal install ghc-mod
 
-RUN hoogle data
+RUN /root/.cabal/bin/hoogle data
 
 RUN mkdir ~/workspace
 VOLUME /root/workspace
@@ -34,4 +34,5 @@ RUN echo "Host github.com\n\
   IdentitiesOnly yes\n" >> /root/.ssh/config
 
 ADD dotfiles.sh /root/
+
 RUN curl -L https://gist.github.com/lambdalisue/5911291/raw/install_vim_debian.sh | bash
