@@ -11,7 +11,7 @@ RUN apt-get update\
       build-essential \
       wget \
       liblua5.2-dev \
-      liblua5.2
+      lua5.2
 
 RUN cabal update
 RUN cabal install pandoc
