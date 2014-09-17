@@ -7,8 +7,8 @@ RUN cabal update
 RUN cabal install pandoc
 RUN cabal install haddock
 RUN cabal install hoogle
-## RUN cabal install ghc-mod
-## RUN cabal install lens
+RUN cabal install ghc-mod
+RUN cabal install lens
 
 ## RUN /root/.cabal/bin/hoogle data
 
