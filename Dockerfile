@@ -9,7 +9,7 @@ RUN cabal install haddock
 RUN cabal install hoogle
 RUN cabal install ghc-mod
 RUN cabal install lens
-
+RUN cabal install yesod-platform yesod-bin --max-backjumps=-1 --reorder-goals
 RUN /root/.cabal/bin/hoogle data
 
 
