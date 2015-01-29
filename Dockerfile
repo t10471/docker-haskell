@@ -10,6 +10,6 @@ RUN cabal install haddock
 RUN cabal install hoogle
 RUN cabal install ghc-mod
 RUN cabal install lens
-RUN /root/.cabal/bin/hoogle data
+# RUN /root/.cabal/bin/hoogle data
 
 ADD init.sh /root/
