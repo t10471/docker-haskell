@@ -8,14 +8,14 @@ RUN cabal update
 RUN cabal install pandoc
 RUN cabal install haddock
 RUN cabal install hoogle
-RUN cabal install ghc-mod
-RUN cabal install lens
+# RUN cabal install ghc-mod
+# RUN cabal install lens
 # RUN /root/.cabal/bin/hoogle data
 
 RUN wget -q -O- https://s3.amazonaws.com/download.fpcomplete.com/ubuntu/fpco.key | sudo apt-key add -
 RUN echo 'deb http://download.fpcomplete.com/ubuntu/trusty stable main'|sudo tee /etc/apt/sources.list.d/fpco.list
 RUN apt-get update && sudo apt-get install stack -y
-RUN stack install yesod-bin cabal-install --install-ghc
+# RUN stack install yesod-bin cabal-install --install-ghc
 
 ADD init.sh /root/
 ADD ghci.conf /root/.ghc/
